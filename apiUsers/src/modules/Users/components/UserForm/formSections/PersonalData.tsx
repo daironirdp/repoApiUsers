@@ -41,7 +41,7 @@ export const PersonalData = () => {
                 label="Website"
                 name="website"
                 type="text"
-                placeholder="https//:www.World.Cup"
+                placeholder="https://www.World.Cup"
                 id=""
             />
         </>

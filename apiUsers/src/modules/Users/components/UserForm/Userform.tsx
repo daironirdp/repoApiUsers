@@ -31,7 +31,7 @@ export const UserForm = (props: formProps) => {
 
         const last = props.users.findLast((u) => u);
 
-        const object: IUser = transformToIUser(values, last == undefined ? 1 : last.id)
+        const object: IUser = transformToIUser(values, last == undefined ? 1 : last.id + 1 )
 
         if (props.creating) {
 
