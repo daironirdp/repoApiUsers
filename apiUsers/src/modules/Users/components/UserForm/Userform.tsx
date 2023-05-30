@@ -29,18 +29,20 @@ export const UserForm = (props: formProps) => {
 
       onSubmit={(values, actions) => {
 
+        //finding the last user's id
         const last = props.users.findLast((u) => u);
 
         const object: IUser = transformToIUser(values, last == undefined ? 1 : last.id + 1 )
 
         if (props.creating) {
 
+          //creating new user 
           const userList: IUser[] = [...props.users, object]
           props.changeUsers(userList);
 
 
         } else {
-
+          //updating existing user
           const newUsers = props.users.map((element) => element.id == props.initialValues.id ? {
             ...element, name: object.name, phone: object.phone, username: object.username, website: object.website,
             email: object.email, company: object.company, address: object.address

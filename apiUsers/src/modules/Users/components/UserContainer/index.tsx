@@ -47,7 +47,7 @@ export const UserContainer: FC<userContainerProps> = ({ user, changeUsers, users
                         <li> Bs: {user.company.bs}</li>
                         <li> Phrase: {user.company.catchPhrase}</li>
                         <li> Phone: {user.phone}</li>
-                        <li> Website:<a href={"" + user.website + ""} style={{ textDecoration: 'none' }} className={'link-info'}> {user.company.name} </a> </li>
+                        <li> Website:<a href={"https://www." + user.website + ""} style={{ textDecoration: 'none' }} className={'link-info'}> {user.company.name} </a> </li>
 
                     </ul>
 

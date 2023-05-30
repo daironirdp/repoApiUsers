@@ -66,7 +66,7 @@ export const UserList = () => {
 
         <div className="d-flex flex-column align-items-center mt-2" >
 
-            {values.error != undefined && values.error.message}
+            {values.error != undefined && values.error}
             <div className='container'>
                 {values.usersToShow.map((item) => (
                     <UserContainer key={item.id} user={item} users={values.users} changeUsers={changeUsers} ></UserContainer>

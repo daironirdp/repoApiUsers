@@ -16,7 +16,7 @@ export const SignupSchema = Yup.object().shape({
 
   website: Yup.string()
     .required('Required')
-    .url(),
+    .matches(/^(?!www\.)([a-z\d]+(-[a-z\d]+)*\.)+[a-z]{2,}(:\d{1,5})?(\/[^\s]*)?$/i, 'The url is not valid'),
   zipcode: Yup.string()
     .required('Required'),
 
