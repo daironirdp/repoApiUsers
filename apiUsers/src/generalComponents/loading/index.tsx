@@ -1,5 +1,10 @@
-export const Loading = () =>{
+import Spinner from 'react-bootstrap/Spinner';
 
-
-    return (<> Loading...</>)
+export function Loading() {
+  return (
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
+  );
 }
+

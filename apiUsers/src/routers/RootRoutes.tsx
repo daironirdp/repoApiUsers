@@ -14,7 +14,7 @@ export const RootRouter = () => {
       <Route
         path="/user/*"
         element={
-          <Suspense fallback={<Loading />}>
+          <Suspense  fallback={<Loading />}>
             <UserRouter />
           </Suspense>
         }

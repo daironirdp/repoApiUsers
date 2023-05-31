@@ -4,12 +4,12 @@ import { IUser } from "../models/User";
 export const transformToFormData = (data: IUser): formValue => {
 
   const newData: formValue = {
+    id: data.id,
     name: data.name,
     username: data.username,
     email: data.email,
     phone: data.phone,
     website: data.website,
-    id: data.id,
     city: data.address.city,
     street: data.address.street,
     zipcode: data.address.zipcode,
@@ -26,11 +26,10 @@ export const transformToFormData = (data: IUser): formValue => {
 }
 
 
-export const transformToIUser = (data: formValue, newId: number): IUser  => {
+export const transformToIUser = (data: formValue): IUser  => {
 
   const newData: IUser = {
     name: data.name,
-    id: newId,
     phone: data.phone,
     email: data.email,
     username: data.username,

@@ -2,7 +2,7 @@
 
 
 export interface formValue {
-  id: number;
+  id?: number;
   phone: string;
   bs: string;
   companyName: string;
@@ -20,14 +20,10 @@ export interface formValue {
 }
 
 export const initialValues: formValue = {
-  id: 1,
   phone: "",
-
-
   bs: "",
   companyName: "",
   catchPhrase: "",
-
   name: "",
   email: "",
   username: "",
